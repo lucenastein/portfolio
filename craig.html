@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craigslist Redesign</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/zni6yzs.css"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <ul class="navulhome">
+            <li class="sitelogo"><a href="index.html">Lucena Stein</a></li>
+        <div class="navlinks">
+            <li class="navlihome"><a href="art.html" class="arthome">ART</a></li>
+            <li class="navlihome"><a href="index.html" class="designhome">DESIGN</a></li>
+            <li class="navlihome"><a href="about.html" class="abouthome">ABOUT</a>
+            </li>
+        </div>
+        </ul>
+    </nav>
+
+    <header class="internalpageh reveal">
+        <h2 class="internalpageheaders">Craigslist Redesign</h2>
+        <section class="internalpagebox">
+            <p class="internalpageps">
+                <strong class="darkinternalpagetext">December 2024</strong><br>
+                <strong class="darkinternalpagetext">Design Interactive Club Fellowship</strong><br>
+                <strong class="darkinternalpagetextzine">As part of Design Interactive's Fall Fellowship, I worked in a team of designers on a six-week sprint to redesign the Craigslist website. The pain-points we identified mostly centered around a cluttered and confusing UI, with extensive buried information and poor organization. For our final design, we aimed to both intuitively guide users through a clean site structure, and present a polished, customer safety and satisfaction oriented brand. My process included creating a new brand kit and Figma prototype with these guidelines in mind. I was also responsible for creating a brand-oriented hero image for the home page, and concise navigation which took into account the most visited parts of Craigslist. </strong></br>
+            </p>
+        </section>
+    </header>
+
+    <main class="reveal">
+    <section class="craighero">
+        <img src="craigslistredo/craigmock.jpg" alt="craig project hero image" id="craighero" height="745" width="1000">
+    </section>
+    <section class="craigflow">
+        <img src="craigslistredo/craigflow.jpg" alt="craigslist figma prototyping" id="craigflow" height="400" width="1020">
+    <section class="craigbrandgif">
+  <img src="craigslistredo/Frame 15.jpg" alt="new craigslist brand kit" id="craigbrand" height="400" width="600">
+  <div class="gifgroup">
+    <img src="craigslistredo/Sequence 01.gif" alt="the redesigned craigslist home page" id="gifhome" height="500" width="900" loading="lazy">
+    <img src="craigslistredo/Sequence 02.gif" alt="the redesigned craigslist home page" id="gifalt" height="500" width="700" loading="lazy">
+  </div>
+</section>
+    <section class="craigpics">
+        <img src="craigslistredo/craigalternate.jpg" alt="craig alternate image one" id="craigone" height="500" width="700">
+        <img src="craigslistredo/craigalternatetwo.jpg" alt="craig alternate image two" id="craigtwo" height="600" width="800">
+    </section>
+    </main>
+    <footer class="internalpagefooter reveal">
+        <div class="footer">
+            <p class="footertext">designed and coded by Lucena Stein 2025</p>
+        </div>
+    </footer>
+     <script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Select all reveal elements except anything inside the nav
+  const elements = document.querySelectorAll('body :not(nav) .reveal, body > .reveal:not(nav)');
+  
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target); // animate once
+      }
+    });
+  }, { threshold: 0.15 }); // trigger when ~15% of element is visible
+
+  elements.forEach(el => observer.observe(el));
+});
+</script> 
+
+</body>
+</html>

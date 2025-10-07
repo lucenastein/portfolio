@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Zine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/zni6yzs.css"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <ul class="navulhome">
+            <li class="sitelogo"><a href="index.html">Lucena Stein</a></li>
+        <div class="navlinks">
+            <li class="navlihome"><a href="art.html" class="arthome">ART</a></li>
+            <li class="navlihome"><a href="index.html" class="designhome">DESIGN</a></li>
+            <li class="navlihome"><a href="about.html" class="abouthome">ABOUT</a>
+            </li>
+        </div>
+        </ul>
+    </nav>
+
+    <header class="internalpageh reveal">
+        <h2 class="internalpageheaders">Forever Thing</h2>
+        <section class="internalpagebox">
+            <p class="internalpageps">
+                <strong class="darkinternalpagetext"> April 2025</strong><br>
+                <strong class="darkinternalpagetext">Course: Letterforms & Type</strong><br>
+                <strong class="darkinternalpagetextzine">For this project, I was initially only given the word "infinity" and free reign to explore its implications through a small zine. I was inspired to create both a graphic and written narrative about an immortal creature--including elements such as oval-shaped pages and symmetrical imagery to call back to the original theme. I used color and text size/alignment to make certain pages feel more or less like newspaper spreads or scientific articles--juxtaposing them against saturated, emotionally evocative spreads from the creature's perspective. I also included consistent imagery from both the natural world and the human body, hoping to give the never directly depicted creature a thematic presence. </strong></br>
+            </p>
+        </section>
+    </header>
+
+    <main class="reveal">
+    <section>
+        <img src="IZmockups.jpg" alt="zine project hero image" id="zinehero" height="1400" width="1000">
+    </section>
+    <section class="zinemocks">
+        <img src="IZmocktwo.jpg" alt="zine mock one" height="600" width="800">
+        <img src="IZmockthree.jpg" alt="zine mock one" height="600" width="800">
+    </section>
+    <section class="zinespreadsone">
+        <div class="spreadone">
+        <img src="spreadone.jpg" alt="zine pg one" id="pgone" height="400" width="500">
+        </div>
+        <div class="spreadtwo">
+        <img src="spreadtwo.jpg" alt="zine pg three" id="pgthree" height="400" width="500">
+        </div>
+        <div class="spreadthree">
+        <img src="spreadthree.jpg" alt="zine pg five" id="pgfive" height="400" width="500">
+        </div>
+    </section>
+    <section class="zinespreadstwo">
+        <div class="spreadfour">
+        <img src="spreadfour.jpg" alt="zine pg seven" id="pgseven" height="400" width="500">
+        </div>
+        <div class="spreadfive">
+        <img src="spreadfive.jpg" alt="zine pg nine" id="pgnine" height="400" width="500">
+        </div>
+        <div class="spreadsix">
+        <img src="spreadsix.jpg" alt="zine pg eleven" id="pgeleven" height="400" width="500">
+        </div>
+    </section>
+    </main>
+    <footer class="internalpagefooter reveal">
+        <div class="footer">
+            <p class="footertext">designed and coded by Lucena Stein 2025</p>
+        </div>
+    </footer>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Select all reveal elements except anything inside the nav
+  const elements = document.querySelectorAll('body :not(nav) .reveal, body > .reveal:not(nav)');
+  
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target); // animate once
+      }
+    });
+  }, { threshold: 0.15 }); // trigger when ~15% of element is visible
+
+  elements.forEach(el => observer.observe(el));
+});
+</script> 
+
+</body>
+</html>

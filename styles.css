@@ -901,8 +901,9 @@ footer {
     padding-left: 1em;
     margin: 0.8em;
     margin-top: 2em;
-    text-align: justify;
-    font-size: 2em;
+    text-align: right;
+    font-size: 1.4em;
+    margin-right: 0.5em;
   }
 
  #typeposter1,

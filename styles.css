@@ -223,6 +223,8 @@ font-size: 1.1em;
   padding: 10em 10em 2em 2em;
 padding-right: 5em;
 padding-left: 5em;
+padding-bottom: 0;
+padding-top: 6em;
 }
 
 .craigvideo,
@@ -243,6 +245,8 @@ padding-left: 5em;
   justify-content: center;
   gap: 2em;
   padding-top: 2em;
+  margin-right: 5em;
+  margin-left: 5em;
 }
 
 .craigbrandgif img {
@@ -251,13 +255,18 @@ padding-left: 5em;
 }
 
 #craigbrand {
-  width: 90%;
+  width: 80%;
   max-width: 1050px;
+  height: 38.5em;
 }
 
 #craigflow {
     width: 100%;
     height: auto;
+}
+
+.craigpics img {
+  width: 46%;
 }
 
 .gifgroup {
@@ -290,10 +299,11 @@ padding-left: 5em;
   justify-content: left;
   padding: 10em 2em 0 5em;
   padding-left: 0;
+  padding-top: 6em;
 }
 
 .alts {
-  padding-top: 10em;
+  padding-top: 6em;
 }
 
 .final img,
@@ -311,7 +321,7 @@ padding-left: 5em;
 }
 
 .final img {
-  width: 900px;
+  width: 950px;
 }
 
 .alts img {

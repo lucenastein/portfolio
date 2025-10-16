@@ -120,12 +120,11 @@ ul {
 /* ===== HOMEPAGE ===== */
 #homepageheaderp {
   font-family: "Plus Jakarta Sans";
-  font-size: 3em;
+  font-size: clamp(1.4em, 3vw, 3em);
   color: rgb(230, 211, 255);
     margin-left: 7.5em;
     margin-top: 2em;
     margin-right: 1.5em;
-    text-align: justify;
 }
 
 .homepageimages {
@@ -199,13 +198,15 @@ font-size: 1.1em;
     margin-right: 4em;
     text-align: justify;
     line-height: 2em;
-    font-size: 1.09em;
+    
+    /* FLUID FONT SIZE */
+    font-size: clamp(1rem, 1.2vw + 0.5rem, 1.2em);
 }
 
 .darkinternalpagetextart{
     margin-left: 20em;
     margin-right: 20em;
-    font-size: 1.3em;
+    font-size: clamp(1.1em, 1.5vw, 1.3em);
     line-height: 1.75em;
     text-align: justify;
 }
@@ -453,6 +454,7 @@ padding-top: 6em;
   line-height: 1.75;
   font-weight: 400;
   margin-top: 1.5em;
+  text-align: justify;
 }
 
 .gitcontainer {
@@ -466,6 +468,7 @@ padding-top: 6em;
 .addresslinkgit {
   padding: 0 0 1em 2em;
   font-size: 1.3em;
+  padding-top: 0.2em;
 }
 
 .fa-brands,
@@ -480,15 +483,15 @@ padding-top: 6em;
 .socialsbox {
   padding-top: 3em;
     display: flex;
-    padding-left: 4em;
+    padding-left: 5em;
 }
 
 #Resumelink {
-    padding-top: 0.2em;
+    padding-top: 0.3em;
 }
 
 #Instagramlink {
-    padding-top: 0.1em;
+    padding-top: 0.2em;
 }
 
 /* ===== FOOTER ===== */
@@ -530,7 +533,9 @@ footer {
   }
 
   .darkinternalpagetext {
-    padding-right: 2em;
+    margin: 0;
+    padding: 0;
+    line-height: 2em;
   }
 
   .internalpageps {
@@ -637,15 +642,6 @@ footer {
     height: auto;
     margin-bottom: 1.5em;
   }
-  .craigbrandgif {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  #craigbrand {
-    width: 80%;
-    max-width: 450px;
-  }
 
   .gifgroup {
     flex-direction: row;
@@ -668,6 +664,54 @@ footer {
   .gitptext {
     font-size: 1rem;
   }
+
+  .darkinternalpagetextart {
+    margin-left: 2em;
+    margin-right: 2em;
+    font-size: clamp(1em, 2.5vw, 1.2em);
+  }
+
+  .internalpageheaders,
+  .internalpageps {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+  }
+
+  /* Center and uniform size for all main images */
+  .craighero img,
+  .craigflow img,
+  #craigbrand,
+  .craigpics img {
+    display: block;
+    margin: 1em auto;
+    max-width: 700px; /* uniform width */
+    width: 90%;
+    height: auto;
+  }
+
+  #craighero {
+    margin: 0;
+    width: 100%;
+    padding-bottom: 2em;
+  }
+
+  /* GIFs side by side but together same width as other images */
+  .gifgroup {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin: 0 auto;
+    width: 29em;
+  }
+
+  .gifgroup video {
+    width: 49%; /* side by side */
+    max-width: none;
+    height: auto;
+  }
+
 }
 
 @media (max-width: 700px) {
@@ -696,8 +740,11 @@ footer {
   }
 
   #homepageheaderp {
-    padding-left: 1em;
-  }
+        font-size: 1.8em;      /* smaller text for mobile */
+        margin-left: 1.5em;    /* reduce left margin */
+        margin-right: 1.5em;   /* reduce right margin */
+    }
+
   .internalpageheaders {
     font-size: 2em;
     text-align: left;
@@ -756,8 +803,6 @@ footer {
   }
 
   #gitimg {
-    width: 80%;
-    max-width: 400px;
     margin: 0 auto;
   }
 
@@ -778,6 +823,52 @@ footer {
 
   .socialsbox {
     align-items: flex-start;
+  }
+
+  .darkinternalpagetextart {
+      margin-left: 2.5em;
+      margin-right: 2.5em;
+      font-size: clamp(1.5em, 2.5vw, 1.2em);
+  }
+
+  .craigflow,
+  .craigbrandgif,
+  .craigpics {
+    padding: 1em;
+  }
+
+  #craighero {
+    margin: 0;
+    width: 100%;
+    padding-bottom: 2em;
+  }
+
+  .craigvideo, .craigpics {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .craigbrandgif {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  #craigbrand {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  #craigflow {
+    width: 90%;
+    height: auto;
+  }
+
+  .gifgroup video {
+    width: 45%;
+    max-width: 200px;
+    height: auto;
   }
 }
 
@@ -806,9 +897,13 @@ footer {
     padding-left: 2.5em; 
   }
 
-#homepageheaderp{
+  #homepageheaderp{
     padding-left: 1em;
-}
+    margin: 0.8em;
+    margin-top: 2em;
+    text-align: justify;
+    font-size: 2em;
+  }
 
  #typeposter1,
   .final img,
@@ -835,7 +930,7 @@ footer {
   .cmockup {
     margin-left: 0;
     max-width: 95%;
-}
+  }
 
   .internalpageheaders {
     font-size: 1.8em;
@@ -890,86 +985,49 @@ footer {
     margin: 0 auto;
   }
 
-  .craighero img,
-  .craigflow img,
-  .craigvideo img,
-  .craigpics img {
-    width: 90%;
-    max-width: 90%;
-    height: auto;
-    display: block;
-    margin: 1em auto;
-  }
-
-  .craighero img {
-    padding-left: 0;
-    margin-left: 0;
-    padding-bottom: 3em;
-  }
-
-  .craigpics {
-    gap: 0;
-  }
-
-  .craigvideo{
-    gap: 0;
-  }
-
-  .craigvideo {
-    flex-direction: column;
-  }
-
-  .craigflow {
-    padding: 0;
-    gap: 0;
-    padding-right: 1em;
-  }
-
-  #craigflow{
-    max-width: 90%;
-  }
-
-  #gifhome, #gifalt {
-    max-width: 30%;
-    padding-right: 16em;
-  }
-
-  footer {
+  .internalpageheaders {
+    font-size: 1.5rem;
     text-align: center;
   }
 
-  .craigbrandgif {
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5em;
-    padding-top: 1em;
+  .internalpageps {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 90%;
+    margin: 0 auto 2em;
   }
 
-  #craigbrand {
-    width: 40%;
-    max-width: 250px;
+  .craighero img,
+  .craigflow img,
+  #craigbrand,
+  .craigpics img {
+    max-width: 95%;
+    width: 95%;
+  }
+
+  .craighero img {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 1em;
+  }
+
+  #craighero {
+    width: 90%;
   }
 
   .gifgroup {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
+    max-width: 95%;
   }
 
-  .gifgroup img {
-    width: 70%;
-    max-width: 200px;
-    height: auto;
+  .gifgroup video {
+    width: 48%; /* still side by side */
   }
 
   .homepageheaderonegit {
-    font-size: 1.5rem;
-    margin-left: 1rem;
-    padding-bottom: 1em;
+    font-size: 3rem;
+    margin-left: 0rem;
+    padding-bottom: 0.5em;
+    margin-top: 0;
   }
 
   #gitimg {
@@ -983,11 +1041,12 @@ footer {
   .gitptext {
     font-size: 1rem;
     padding-right: 2em;
-    padding-left: 2.5em;
+    padding-left: 2em;
+    text-align: justify;
   }
 
   .gitpsocials{
-    padding-left: 2.5em;
+    padding-left: 2em;
   }
 
   .gitaside{
@@ -997,6 +1056,23 @@ footer {
 
   .socialsbox{
     padding-top: 2.7em;
+    padding-left: 0;
+    flex-direction: column;
   }
 
+  .darkinternalpagetextart {
+        margin-left: 2.5em;
+        margin-right: 2.5em;
+        font-size: clamp(1em, 3vw, 1em);
+        text-align: justify;
+      }
+
+  .darkinternalpagetextzine{
+    margin: 1em;
+    margin-top: 3em;
+  }
+
+  .artmain{
+    margin-top: 5em;
+  }
 }
